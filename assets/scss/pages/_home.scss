@@ -1,0 +1,28 @@
+.location {
+    background-color: $grey;
+    color: $dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    &__pin {
+        margin-right: 15px;
+    }
+}
+
+.explorer {
+    background-color: $light-grey;
+    padding: 30px 15px;
+    &__title {
+        text-align: center;
+        font-weight: 900;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    &__description {
+        text-align: center;
+        font-weight: 300;
+        line-height: 18px;
+        margin-bottom: 40px;
+    }
+}

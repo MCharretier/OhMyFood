@@ -1,0 +1,25 @@
+.header {
+    &, &--home {
+        position: relative;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    &__back {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: $dark-grey;
+        font-size: 28px;
+    }
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    &--home {
+        .header__back {
+            display: none;
+        }
+    }
+}
