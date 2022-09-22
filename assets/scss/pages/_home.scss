@@ -8,11 +8,15 @@
     &__pin {
         margin-right: 15px;
     }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 .explorer {
     background-color: $light-grey;
-    padding: 30px 15px;
+    padding: 30px 20px;
     &__title {
         text-align: center;
         font-weight: 900;
@@ -23,6 +27,113 @@
         text-align: center;
         font-weight: 300;
         line-height: 18px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+.functioning {
+    padding: 40px 20px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        .step, .step--highlight {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: calc(100% - 10px);
+            background-color: $light-grey;
+            padding: 20px 35px;
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+            &__number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                color: $white;
+                font-size: 12px;
+            }
+            &__icon {
+                color: rgba($black, 60%);
+                margin-right: 20px;
+            }
+            &__text {
+                font-weight: 600;
+            }
+        }
+        .step--highlight {
+            background-color: rgba($primary-color, 15%);
+            .step__icon {
+                color: rgba($primary-color, 100%);
+            }
+        }
+    }
+}
+
+.restaurants {
+    background-color: $light-grey;
+    padding: 40px 20px 50px 20px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        .card, .card--new {
+            overflow: hidden;
+            background-color: $white;
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+            &__image {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                object-position: bottom;
+                height: 180px;
+            }
+            .card__informations {
+                padding: 15px;
+                position: relative;
+                .card__title {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                .like {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    &:hover {
+                        transform: translateY(-50%) scale(1.2);
+                    }
+                }
+            }
+        }
+        .card--new {
+            position: relative;
+            &::after {
+                content: 'Nouveau';
+                display: inline-block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background-color: $third-color;
+                color: rgba($black, 50%);
+                border-radius: 5px;
+                line-height: 30px;
+                padding: 0 10px;
+                font-size: 16px;
+                font-weight: 500;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
     }
 }

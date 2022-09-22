@@ -1,0 +1,26 @@
+.footer {
+    background-color: $dark-grey;
+    color: $white;
+    padding: 20px;
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        .nav__link, .nav__link--highlight {
+            font-weight: 300;
+            margin-bottom: 5px;
+            .link__icon {
+                margin-right: 8px;
+            }
+        }
+        .nav__link--highlight {
+            font-weight: 500;
+        }
+    }
+}
