@@ -1,0 +1,10 @@
+.container {
+    margin: 0 auto;
+    max-width: 500px;
+    @include breakpoint($laptop) {
+        max-width: 1000px;
+    }
+    @include breakpoint($xxl) {
+        max-width: 1400px;
+    }
+}

@@ -32,6 +32,7 @@
     }
     &__title {
         text-align: center;
+        font-size: 24px;
         font-weight: 900;
         line-height: 28px;
         margin-bottom: 16px;
@@ -194,8 +195,8 @@
                 top: 15px;
                 right: 15px;
                 background-color: $third-color;
-                color: rgba($black, 50%);
-                border-radius: 5px;
+                color: rgba($black, 45%);
+                border-radius: 2px;
                 line-height: 30px;
                 padding: 0 10px;
                 font-size: 16px;
