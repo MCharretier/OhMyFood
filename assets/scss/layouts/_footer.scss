@@ -1,7 +1,10 @@
 .footer {
     background-color: $dark-grey;
     color: $white;
-    padding: 20px;
+    padding: $window-padding;
+    @include breakpoint($xxl) {
+        padding: $window-padding-xxl;
+    }
     &__logo {
         font-family: 'Shrikhand', cursive;
         font-size: 22px;

@@ -4,11 +4,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 0;
+    padding: 12px $window-padding;
+    @include breakpoint($laptop) {
+        padding: 20px $window-padding-laptop;
+    }
+    @include breakpoint($xxl) {
+        padding: 20px $window-padding-xxl;
+    }
     &__pin {
-        margin-right: 15px;
+        margin-right: 10px;
     }
     &__text {
+        display: inline-block;
         font-size: 16px;
         font-weight: 400;
     }
@@ -16,7 +23,13 @@
 
 .explorer {
     background-color: $light-grey;
-    padding: 30px 20px;
+    padding: 30px $window-padding;
+    @include breakpoint($laptop) {
+        padding: 50px $window-padding-laptop;
+    }
+    @include breakpoint($xxl) {
+        padding: 30px $window-padding-xxl;
+    }
     &__title {
         text-align: center;
         font-weight: 900;
@@ -32,11 +45,21 @@
 }
 
 .functioning {
-    padding: 40px 20px;
+    padding: 40px $window-padding;
+    @include breakpoint($laptop) {
+        padding: 50px $window-padding-laptop;
+    }
+    @include breakpoint($xxl) {
+        padding: 50px $window-padding-xxl;
+    }
     &__list {
         display: flex;
         flex-direction: column;
         align-items: end;
+        @include breakpoint($laptop) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         .step, .step--highlight {
             display: flex;
             align-items: center;
@@ -47,6 +70,23 @@
             margin-top: 20px;
             border-radius: 20px;
             box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+            @include breakpoint($laptop) {
+                flex: 33%;
+                &:nth-child(odd) {
+                    margin-right: 20px;
+                }
+                &:last-child {
+                    max-width: calc(50% - 10px);
+                }
+            }
+            @include breakpoint($desktop) {
+                flex: 25%;
+                max-width: unset;
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
             &__number {
                 display: flex;
                 align-items: center;
@@ -81,21 +121,47 @@
 
 .restaurants {
     background-color: $light-grey;
-    padding: 40px 20px 50px 20px;
+    padding: 40px $window-padding 50px $window-padding;
+    @include breakpoint($laptop) {
+        padding: 50px $window-padding-laptop;
+    }
+    @include breakpoint($xxl) {
+        padding: 50px $window-padding-xxl;
+    }
     &__list {
         display: flex;
         flex-direction: column;
+        @include breakpoint($laptop) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         .card, .card--new {
             overflow: hidden;
             background-color: $white;
             margin-top: 20px;
             border-radius: 20px;
             box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+            @include breakpoint($laptop) {
+                flex: 33%;
+                &:nth-child(odd) {
+                    margin-right: 20px;
+                }
+            }
+            @include breakpoint($xxl) {
+                flex: 25%;
+                margin-right: 20px;
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    max-width: calc(33% - 10px);
+                }
+            }
             &__image {
                 display: block;
                 width: 100%;
                 object-fit: cover;
-                object-position: bottom;
+                object-position: center;
                 height: 180px;
             }
             .card__footer {
