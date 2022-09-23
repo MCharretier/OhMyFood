@@ -61,7 +61,7 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
-        .step, .step--highlight {
+        .step {
             display: flex;
             align-items: center;
             position: relative;
@@ -71,6 +71,7 @@
             margin-top: 20px;
             border-radius: 20px;
             box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+            transition: 0.3s;
             @include breakpoint($laptop) {
                 flex: 33%;
                 &:nth-child(odd) {
@@ -86,6 +87,12 @@
                 margin-right: 20px;
                 &:last-child {
                     margin-right: 0;
+                }
+            }
+            &:hover {
+                background-color: rgba($primary-color, 15%);
+                .step__icon {
+                    color: rgba($primary-color, 100%);
                 }
             }
             &__number {
@@ -109,12 +116,6 @@
             }
             &__text {
                 font-weight: 600;
-            }
-        }
-        .step--highlight {
-            background-color: rgba($primary-color, 15%);
-            .step__icon {
-                color: rgba($primary-color, 100%);
             }
         }
     }

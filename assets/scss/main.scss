@@ -3,6 +3,7 @@
 @import "./vendors/normalize";
 @import "./vendors/fontawesome/fontawesome.scss";
 @import "./vendors/fontawesome/solid.scss";
+@import "./base/keyframes";
 @import "./base/reset";
 @import "./base/fonts";
 @import "./components/container";
@@ -11,3 +12,4 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/home";
+@import "./pages/menus";
