@@ -1,5 +1,17 @@
 .banner {
     height: 300px;
+    @include breakpoint($tablet) {
+        height: 400px;
+    }
+    @include breakpoint($laptop) {
+        height: 500px;
+    }
+    @include breakpoint($desktop) {
+        height: 600px;
+    }
+    @include breakpoint($xxl) {
+        height: 700px;
+    }
     &__image {
         height: 100%;
         width: 100%;
@@ -14,6 +26,12 @@
     border-radius: 25px;
     margin-top: -25px;
     padding: $window-padding;
+    @include breakpoint($laptop) {
+        padding: $window-padding-laptop;
+    }
+    @include breakpoint($xxl) {
+        padding: $window-padding-xxl;
+    }
     &__header {
         display: flex;
         align-items: center;
@@ -44,11 +62,32 @@
             }
         }
         &__list {
+            display: flex;
+            flex-direction: column;
+            @include breakpoint($laptop) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
             .menu__item {
                 margin-top: 15px;
                 border-radius: 15px;
                 box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
                 overflow: hidden;
+                @include breakpoint($laptop) {
+                    flex: 33%;
+                    max-width: calc(50% - 7.5px);
+                    &:nth-child(odd) {
+                        margin-right: 15px;
+                    }
+                }
+                @include breakpoint($xxl) {
+                    flex: 25%;
+                    max-width: calc(33% - 7.5px);
+                    margin-right: 15px;
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
                 &:nth-child(1) {
                     animation: smoothEntry 1s;
                 }

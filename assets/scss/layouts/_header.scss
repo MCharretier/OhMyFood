@@ -14,16 +14,16 @@
     &__back {
         position: absolute;
         top: 50%;
-        left: 20px;
+        left: 0;
         transform: translateY(-50%);
         color: $dark-grey;
         font-size: 28px;
-        @include breakpoint($laptop) {
-            left: $window-padding-laptop;
-        }
-        @include breakpoint($xxl) {
-            left: $window-padding-xxl;
-        }
+        // @include breakpoint($laptop) {
+        //     left: $window-padding-laptop;
+        // }
+        // @include breakpoint($xxl) {
+        //     left: $window-padding-xxl;
+        // }
     }
     &__logo {
         display: block;
