@@ -11,11 +11,17 @@
     &__logo {
         height: 20px;
         margin-bottom: 10px;
+        @include breakpoint($xxl) {
+            height: 25px;
+        }
     }
     &__nav {
         display: flex;
         flex-direction: column;
         font-size: 16px;
+        @include breakpoint($xxl) {
+            font-size: 18px;
+        }
         .nav__link, .nav__link--highlight {
             font-weight: 300;
             margin-bottom: 5px;

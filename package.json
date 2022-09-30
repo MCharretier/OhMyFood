@@ -1,15 +1,22 @@
 {
-  "name": "p3",
+  "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ce site permet aux utilisateurs de composer leur propre menu dans des restaurants gastronomiques. Une fois commandé, le menu est préparé le temps d'arriver au restaurant. Cela à pour but de réduire le temps d'attente sur place.",
   "main": "index.js",
   "scripts": {
     "sass": "sass ./assets/scss/main.scss:./assets/css/stylesheet.css --watch --style compressed"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCharretier/ohmyfood.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MCharretier/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/MCharretier/ohmyfood#readme",
   "dependencies": {
-    "sass": "^1.54.9"
+    "sass": "^1.55.0"
   }
 }

@@ -7,11 +7,16 @@
     color: $white;
     font-size: 16px;
     line-height: 50px;
+    text-align: center;
     width: fit-content;
+    min-width: 180px;
     padding: 0 20px;
     border-radius: 25px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     transition: 0.3s;
+    @include breakpoint($xxl) {
+        font-size: 18px;
+    }
     &:hover {
         background: rgba($secondary-color, 90%);
         background: linear-gradient(170deg, rgba($secondary-color, 90%) 0%, rgba($primary-color, 90%) 100%);

@@ -1,16 +1,16 @@
 .banner {
     height: 300px;
     @include breakpoint($tablet) {
-        height: 400px;
+        height: 350px;
     }
     @include breakpoint($laptop) {
-        height: 500px;
+        height: 400px;
     }
     @include breakpoint($desktop) {
-        height: 600px;
+        height: 500px;
     }
     @include breakpoint($xxl) {
-        height: 700px;
+        height: 600px;
     }
     &__image {
         height: 100%;
@@ -25,12 +25,12 @@
     background-color: $light-grey;
     border-radius: 25px;
     margin-top: -25px;
-    padding: $window-padding;
+    padding: 30px $window-padding 60px;
     @include breakpoint($laptop) {
-        padding: $window-padding-laptop;
+        padding: 40px $window-padding-laptop 60px;
     }
     @include breakpoint($xxl) {
-        padding: $window-padding-xxl;
+        padding: 50px $window-padding-xxl 60px;
     }
     &__header {
         display: flex;
@@ -39,7 +39,6 @@
         .header__title {
             margin: 0;
             font-family: 'Shrikhand', cursive;
-            font-size: 30px;
             font-weight: 500;
         }
     }
@@ -51,6 +50,9 @@
             font-weight: 300;
             position: relative;
             margin-bottom: 10px;
+            @include breakpoint($xxl) {
+                font-size: 19px;
+            }
             &::after {
                 content: '';
                 height: 3px;
@@ -97,12 +99,18 @@
                 &:nth-child(3) {
                     animation: smoothEntry 2s;
                 }
+                &:nth-child(4) {
+                    animation: smoothEntry 2.5s;
+                }
                 .item__informations {
                     background-color: $white;
                     padding: 10px;
                     position: relative;
                     width: 100%;
                     transition: 0.5s width;
+                    @include breakpoint($laptop) {
+                        padding: 15px;
+                    }
                     .item__title {
                         white-space: nowrap;
                         overflow: hidden;
